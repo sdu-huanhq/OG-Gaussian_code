@@ -1,0 +1,63 @@
+# config.yaml
+
+source_pkl_path: "generated_tasks_v2_gs_source/Kettle/Kettle-lift_kettle_and_pour_water_v5/dataset"  
+intermediate_dir: "generated_tasks_v2_gs_source/Kettle/Kettle-lift_kettle_and_pour_water_v5/gs_dataset_intermediate"
+final_output_dir: "generated_tasks_v2_gs_source/Kettle/Kettle-lift_kettle_and_pour_water_v5/gs_dataset_h5"
+weights_root: "./weights"
+rewrite: False
+quiet: False
+processes_per_gpu: 1
+gpu_ids: [0,1,2,3]
+
+model_params:
+  sh_degree: 3
+  source_path: ""
+  model_path: ""
+  images: "images"
+  resolution: -1
+  white_background: false
+  data_device: "cuda"
+  eval: false
+  distill_feature_dim: 32
+  raw_img_resolution: [512, 512]
+  dino_resolution: 512
+  obj_feat_res: 100
+  final_feat_res: 64
+
+optimization_params:
+  iterations: 3000                 
+  position_lr_init: 0.00016
+  position_lr_final: 0.0000016
+  position_lr_delay_mult: 0.01
+  position_lr_max_steps: 30000
+  feature_lr: 0.0025
+  opacity_lr: 0.05
+  scaling_lr: 0.005
+  rotation_lr: 0.001
+  percent_dense: 0.01
+  lambda_dssim: 0.2
+  densification_interval: 100
+  opacity_reset_interval: 3000
+  densify_from_iter: 2_000
+  densify_until_iter: 15000
+  densify_grad_threshold: 0.0002
+  distill_lr: 0.0025
+  update_features_until_iter: 2500
+  update_decoder_until_iter: 2000
+  save_iterations: [3000]        
+
+pipeline_params:
+  convert_SHs_python: false
+  compute_cov3D_python: false
+  debug: false
+
+segmentation:
+  slackness: 0.7     # Gamma value
+  iteration: 3000
+
+sampling:
+  action_max_points: 5120
+  action_min_points: 1280
+  anchor_max_points: 5120
+  anchor_min_points: 1280
+  fov_deg: 60.0

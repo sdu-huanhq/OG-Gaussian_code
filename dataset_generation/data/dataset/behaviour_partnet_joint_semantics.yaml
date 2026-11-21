@@ -1,0 +1,64 @@
+'100031':
+  joint_0: lid
+'101305':
+  joint_0: lid
+'101311':
+  joint_0: lid
+  joint_1: handle
+'101313':
+  joint_0: lid
+'101315':
+  joint_0: lid
+'102714':
+  joint_0: lid
+  joint_1: lever
+'102715':
+  joint_0: lid
+'102720':
+  joint_0: lid
+'102724':
+  joint_0: lid
+'102726':
+  joint_0: lid
+  joint_1: handle
+'102730':
+  joint_0: lid
+  joint_1: handle
+'102732':
+  joint_0: lid
+'102736':
+  joint_0: lid
+'102738':
+  joint_0: lid
+  joint_1: handle
+'102739':
+  joint_0: lid
+  joint_1: handle
+'102756':
+  joint_0: lid
+  joint_1: handle
+'102761':
+  joint_0: lid
+'102763':
+  joint_0: lid
+'102765':
+  joint_0: lid
+'102773':
+  joint_0: lid
+'102786':
+  joint_0: lid
+'103201':
+  joint_0: lid
+'103207':
+  joint_0: lid
+'103208':
+  joint_0: lid
+  joint_1: button
+'103222':
+  joint_0: lid
+'103223':
+  joint_0: rotation lid
+lwtcfh:
+  j_link_0: drawer
+mwsyqb:
+  j_link_0: drawer
